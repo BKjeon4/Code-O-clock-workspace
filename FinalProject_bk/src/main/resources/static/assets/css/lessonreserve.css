@@ -1,0 +1,79 @@
+.calendar-round {
+	background: #f5f6fa;
+	border-radius: 10px;
+}
+
+#calendar-container {
+	background: white;
+	margin: 30px;
+}
+
+.room__tag {
+	text-align: left;
+}
+
+.room__tag a {
+	display: inline-block;
+    height: 24px;
+    /* line-height: 24px; */
+    /* font-size: 14px; */
+    font-weight: 500;
+    color: #ffffff;
+    background: #2C3E50;
+    padding: 0 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.teacher__title2 {
+	display: inline-block;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.room-btn {
+	display: inline-block;
+    height: 50px;
+    line-height: 52px;
+    text-align: center;
+    padding: 0 25px;
+    color: #ffffff;
+    background: #2C3E50;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.teacher__lecture {
+	color: #0e1133;
+	background: #C0C0C0;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.instruction-container {
+	background: rgba(0, 3, 32, 0.6);
+	border-radius: 20px;
+}
+
+.instruction-inner {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.how-to {
+	margin:30px;
+}
+
+.content {
+	color:white;
+}
+
+.content li {
+	list-style:inside;
+}

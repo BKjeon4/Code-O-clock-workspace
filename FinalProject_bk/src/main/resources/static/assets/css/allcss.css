@@ -1,0 +1,55 @@
+
+#details{
+	padding: 0px 150px 0px 50px;
+	zoom: 1.1;
+}
+
+#teacher{
+	padding: 0px 0px 0px 280px;
+}
+
+::placeholder{
+	color : gray;
+}
+
+
+
+#side{
+	
+	position: absolute;
+ 	 right: 0;
+ 	 padding: 0px 270px 0px 0px;
+
+}
+
+div{
+	color:#333333;
+	font-family: 'Palatino Linotype', 'Book Antiqua'
+}
+
+
+
+body#mainB{
+	background-color: black;
+}
+
+
+.ajaxBtn{
+	  display: inline-block;
+	   color: black;
+
+  float: left;
+
+  padding: 8px 16px;
+
+  text-decoration: none;
+
+  border-radius:50%;
+}
+
+
+.collapse-item{
+	
+	color: gray;
+}
+

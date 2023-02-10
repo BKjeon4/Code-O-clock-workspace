@@ -1,0 +1,13 @@
+/* 경주 
+   1~3위 별 스타일 */
+.blog__author span i {
+  padding-right: 5px;
+  color: #ff9415;
+}
+
+/* 경주 
+   4~10위 별 스타일 */
+.events__meta span i {
+  padding-right: 5px;
+  color: #ff9415;
+}
