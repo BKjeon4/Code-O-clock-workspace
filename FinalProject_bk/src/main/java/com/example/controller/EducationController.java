@@ -22,7 +22,6 @@ import com.example.domain.EducationVO;
 import com.example.domain.ReviewVO;
 import com.example.persistence.EducationRepository;
 import com.example.persistence.JjimRepository;
-import com.example.persistence.RankRepository;
 import com.example.persistence.ReviewRepository;
 import com.example.persistence.WishListRepository;
 import com.example.service.EducationService;
