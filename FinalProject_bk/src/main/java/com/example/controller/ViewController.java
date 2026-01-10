@@ -24,10 +24,11 @@ public class ViewController {
    @Autowired
    private JjimRepository jjimRepo;
    
-   @RequestMapping("/{step}")
-   public String viewPage(@PathVariable String step) {
-      return step;
-   }
+@RequestMapping("/{step:^(?!academy|lecture|admin|board|mypage).*$}")
+public String viewPage(@PathVariable String step) {
+    return step;
+}
+
    
    @RequestMapping("/academy/{step}")
    public String viewAcademy(@PathVariable String step, Model m, HttpSession session) {
