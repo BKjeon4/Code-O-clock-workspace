@@ -1,22 +1,24 @@
 package com.example.persistence;
 
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-public interface SearchRepository {
+public class SearchRepository {
 
-    @Modifying
+    @PersistenceContext
+    private EntityManager em;
+
     @Transactional
-    @Query(
-        value = "INSERT INTO search (keywords, m_idint) VALUES (:keywords, :memId)",
-        nativeQuery = true
-    )
-    void insertSearch(
-        @Param("keywords") String keywords,
-        @Param("memId") Integer memId
-    );
+    public void insertSearch(String keywords, Integer memId) {
+        em.createNativeQuery(
+            "INSERT INTO search (keywords, m_idint) VALUES (:keywords, :memId)"
+        )
+        .setParameter("keywords", keywords)
+        .setParameter("memId", memId)
+        .executeUpdate();
+    }
 }
