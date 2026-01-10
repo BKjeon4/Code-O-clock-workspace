@@ -10,18 +10,18 @@ import com.example.persistence.RankRepository;
 @RequestMapping("/academy")
 public class RankController {
 
-	@Autowired
-	private RankRepository rankRepo;
+	//@Autowired
+	//private RankRepository rankRepo;
 	
 	@RequestMapping("/rank")
 	public void rankQuery(Model m) {
 		System.out.println("실험");
 		
 		//1~3위까지
-		m.addAttribute("rank", rankRepo.rankQuery());
+		//m.addAttribute("rank", rankRepo.rankQuery());
 		
 		//4~10위까지
-		m.addAttribute("rankOther", rankRepo.rankQueryOther());
+		//m.addAttribute("rankOther", rankRepo.rankQueryOther());
 		
 	}
 }
