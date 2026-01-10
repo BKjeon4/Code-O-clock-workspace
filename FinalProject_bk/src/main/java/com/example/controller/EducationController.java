@@ -45,8 +45,8 @@ public class EducationController {
    @Autowired
    private ReviewRepository reviewRepository;
 
-   @Autowired
-   private RankRepository rankRepo;
+ //  @Autowired
+ //  private RankRepository rankRepo;
    
    @Autowired
    private JjimRepository jjimRepo;
@@ -105,11 +105,11 @@ public class EducationController {
       
       //학원랭킹 1~3위(경주)
       //1위
-      m.addAttribute("rankFirst", rankRepo.rankQueryFirst());
+     // m.addAttribute("rankFirst", rankRepo.rankQueryFirst());
       //2위
-      m.addAttribute("rankSecond", rankRepo.rankQuerySecond());
+    //  m.addAttribute("rankSecond", rankRepo.rankQuerySecond());
       //3위
-      m.addAttribute("rankThird", rankRepo.rankQueryThird());
+    //  m.addAttribute("rankThird", rankRepo.rankQueryThird());
     
 
       //리턴페이지의 디폴트 값
