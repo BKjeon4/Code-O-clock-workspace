@@ -1,10 +1,7 @@
 package com.example.controller;
 
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,93 +15,68 @@ import com.example.persistence.WishListRepository;
 
 @Controller
 public class ViewController {
-   @Autowired
-   private WishListRepository wishRepo;
-   
-   @Autowired
-   private JjimRepository jjimRepo;
-   
 
-@RequestMapping("/{step}")
-public String viewPage(@PathVariable String step) {
-    return step;
-}
+    @Autowired
+    private WishListRepository wishRepo;
 
+    @Autowired
+    private JjimRepository jjimRepo;
 
-   
-   @RequestMapping("/academy/{step}")
-   public String viewAcademy(@PathVariable String step, Model m, HttpSession session) {
-      Integer memIdInt = (Integer) session.getAttribute("memIdInt");
-      List<Object[]> wlist = wishRepo.findByMemIdInt(memIdInt);
-      List<Object[]> jlist = jjimRepo.findByMemIdIntlec(memIdInt);
-      
-      for(Object[] temp : wlist) {
-    	  System.out.println("wlist : " + Arrays.toString(temp));
-      }
-      
-      for(Object[] temp : jlist) {
-    	  System.out.println("jlist : " + Arrays.toString(temp));
-      }
-      
-      m.addAttribute("wishList", wlist);
-      m.addAttribute("jjimList", jlist);
-      return "/academy/"+step;
-   }
-   
-   @RequestMapping("/admin/{step}")
-   public String viewAdmin(@PathVariable String step) {
-      return "/admin/"+step;
-   }
-   
-   @RequestMapping("/lecture/{step}")
-   public String viewLecture(@PathVariable String step, Model m, HttpSession session) {
-      Integer memIdInt = (Integer) session.getAttribute("memIdInt");
-      List<Object[]> wlist = wishRepo.findByMemIdInt(memIdInt);
-      List<Object[]> jlist = jjimRepo.findByMemIdIntlec(memIdInt);
-      
-      for(Object[] temp : wlist) {
-    	  System.out.println("wlist : " + Arrays.toString(temp));
-      }
-      
-      for(Object[] temp : jlist) {
-    	  System.out.println("jlist : " + Arrays.toString(temp));
-      }
-      
-      m.addAttribute("wishList", wlist);
-      m.addAttribute("jjimList", jlist);
-      return "/lecture/"+step;
-   }
-   
+    // =========================
+    // academy
+    // =========================
+    @RequestMapping("/academy/{step}")
+    public String viewAcademy(@PathVariable String step, Model m, HttpSession session) {
+        Integer memIdInt = (Integer) session.getAttribute("memIdInt");
+        if (memIdInt != null) {
+            m.addAttribute("wishList", wishRepo.findByMemIdInt(memIdInt));
+            m.addAttribute("jjimList", jjimRepo.findByMemIdIntlec(memIdInt));
+        }
+        return "academy/" + step;
+    }
 
-   @RequestMapping("/mypage/{step}")
-   public String viewMyPage(@PathVariable String step, Model m, HttpSession session) {
-      Integer memIdInt = (Integer) session.getAttribute("memIdInt");
-      List<Object[]> wlist = wishRepo.findByMemIdInt(memIdInt);
-      List<Object[]> jlist = jjimRepo.findByMemIdIntlec(memIdInt);
-      m.addAttribute("wishList", wlist);
-      m.addAttribute("jjimList", jlist);
-      return "/mypage/"+step;
-   }
-   
-   @RequestMapping("/board/{step}")
-   public String viewBoard(@PathVariable String step, Model m, HttpSession session) {
-      Integer memIdInt = (Integer) session.getAttribute("memIdInt");
-      List<Object[]> wlist = wishRepo.findByMemIdInt(memIdInt);
-      List<Object[]> jlist = jjimRepo.findByMemIdIntlec(memIdInt);
-      m.addAttribute("wishList", wlist);
-      m.addAttribute("jjimList", jlist);
-      return "/board/"+step;
-   }
+    // =========================
+    // lecture
+    // =========================
+    @RequestMapping("/lecture/{step}")
+    public String viewLecture(@PathVariable String step, Model m, HttpSession session) {
+        Integer memIdInt = (Integer) session.getAttribute("memIdInt");
+        if (memIdInt != null) {
+            m.addAttribute("wishList", wishRepo.findByMemIdInt(memIdInt));
+            m.addAttribute("jjimList", jjimRepo.findByMemIdIntlec(memIdInt));
+        }
+        return "lecture/" + step;
+    }
 
-	@RequestMapping("/outside/{step}")
-	public void viewOutside(HttpServletResponse httpServletResponse, @PathVariable String step) throws IOException {
-		httpServletResponse.sendRedirect("http://"+step);
-	}
-	
-	@RequestMapping("/hello")
-	public void test(String test) {
-		System.out.println(test);
-	}
-	
-	
+    // =========================
+    // admin
+    // =========================
+    @RequestMapping("/admin/{step}")
+    public String viewAdmin(@PathVariable String step) {
+        return "admin/" + step;
+    }
+
+    // =========================
+    // board
+    // =========================
+    @RequestMapping("/board/{step}")
+    public String viewBoard(@PathVariable String step) {
+        return "board/" + step;
+    }
+
+    // =========================
+    // mypage
+    // =========================
+    @RequestMapping("/mypage/{step}")
+    public String viewMyPage(@PathVariable String step) {
+        return "mypage/" + step;
+    }
+
+    // =========================
+    // fallback (index, login, join 등)
+    // =========================
+    @RequestMapping("/{step}")
+    public String viewPage(@PathVariable String step) {
+        return step;
+    }
 }
