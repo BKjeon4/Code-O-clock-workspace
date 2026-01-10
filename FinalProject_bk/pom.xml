@@ -83,6 +83,14 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			</dependency>
+
+		<!-- db 추가 -->
+		<!-- H2 Database (for cloud demo) -->
+		<dependency>
+    		<groupId>com.h2database</groupId>
+    		<artifactId>h2</artifactId>
+    		<scope>runtime</scope>
+			</dependency>
 		
 	</dependencies>
 
