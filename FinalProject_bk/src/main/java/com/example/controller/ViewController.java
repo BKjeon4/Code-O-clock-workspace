@@ -25,11 +25,11 @@ public class ViewController {
    private JjimRepository jjimRepo;
    
 
-    // 공용 1-depth 페이지
-    @RequestMapping("/{step:^(?!academy(/|$)|lecture(/|$)|admin(/|$)|board(/|$)|mypage(/|$)).*$}")
-    public String viewPage(@PathVariable String step) {
-        return step;
-    }
+@RequestMapping("/{step}")
+public String viewPage(@PathVariable String step) {
+    return step;
+}
+
 
    
    @RequestMapping("/academy/{step}")
