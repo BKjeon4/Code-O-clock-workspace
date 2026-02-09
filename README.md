@@ -99,7 +99,9 @@ Rather than relying on heavy frontend frameworks, the focus is on backend stabil
 - Maven
 - Docker (optional)
 
-### Run locally
+## Run Locally
+
+Clone the repository and run the application using Spring Boot.
 
 ```bash
 git clone https://github.com/BKjeon4/Code-O-clock-workspace.git
@@ -132,5 +134,3 @@ LinkedIn: https://www.linkedin.com/in/byungwook-bk-jeon/
 Notes
 This project was developed as part of a full-stack learning journey and continues to evolve as I refine both backend architecture and user experience.
 
-
----
