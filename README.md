@@ -74,6 +74,25 @@ Rather than relying on heavy frontend frameworks, the focus is on backend stabil
 
 ---
 
+## Project Structure
+
+```src
+src
+├── main
+│ ├── java
+│ │ └── com.codeoclock
+│ │ ├── controller
+│ │ ├── service
+│ │ ├── repository
+│ │ └── model
+│ └── resources
+│ ├── templates
+│ ├── static
+│ └── application.properties
+└── test
+
+
+---
 ## Getting Started (Local Development)
 
 ### Prerequisites
@@ -105,6 +124,8 @@ Working with ORM and relational data models
 Deploying Java applications using Docker
 
 Balancing functionality with clarity in UI design
+
+---
 
 Author
 Byungwook Jeon
