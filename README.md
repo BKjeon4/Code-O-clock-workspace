@@ -114,23 +114,6 @@ LinkedIn: https://www.linkedin.com/in/byungwook-bk-jeon/
 Notes
 This project was developed as part of a full-stack learning journey and continues to evolve as I refine both backend architecture and user experience.
 
-## Project Structure
-
-```src
-src
-├── main
-│ ├── java
-│ │ └── com.codeoclock
-│ │ ├── controller
-│ │ ├── service
-│ │ ├── repository
-│ │ └── model
-│ └── resources
-│ ├── templates
-│ ├── static
-│ └── application.properties
-└── test
 
 
----
 
