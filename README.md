@@ -112,12 +112,14 @@ mvn spring-boot:run
 The application will be available at:
 
 http://localhost:8080
-Docker
+
+## Docker
 To build and run using Docker:
 
 docker build -t code-oclock .
 docker run -p 8080:8080 code-oclock
-What I Learned
+
+## What I Learned
 Designing backend-driven user flows
 
 Structuring Spring Boot applications for maintainability
@@ -128,11 +130,11 @@ Deploying Java applications using Docker
 
 Balancing functionality with clarity in UI design
 
-Author
+## Author
 Byungwook Jeon
 GitHub: https://github.com/BKjeon4
 LinkedIn: https://www.linkedin.com/in/byungwook-bk-jeon/
 
-Notes
+## Notes
 This project was developed as part of a full-stack learning journey and continues to evolve as I refine both backend architecture and user experience.
 
