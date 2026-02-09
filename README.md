@@ -62,7 +62,7 @@ The project emphasizes clarity, maintainability, and realistic backend workflows
 ---
 
 ## Project Structure
-
+```
 src
 ├── main
 │ ├── java
@@ -77,7 +77,7 @@ src
 │ └── application.properties
 └── test
 
-
+```
 ---
 
 ## Design & Development Approach
@@ -107,6 +107,8 @@ Clone the repository and run the application using Spring Boot.
 git clone https://github.com/BKjeon4/Code-O-clock-workspace.git
 cd Code-O-clock-workspace
 mvn spring-boot:run
+```
+
 The application will be available at:
 
 http://localhost:8080
