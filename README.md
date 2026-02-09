@@ -61,22 +61,8 @@ The project emphasizes clarity, maintainability, and realistic backend workflows
 
 ---
 
-
-## Design & Development Approach
-
-This project was built with a strong emphasis on:
-- Separation of concerns
-- Readable backend logic
-- Predictable data flow
-- Clean template-driven UI
-
-Rather than relying on heavy frontend frameworks, the focus is on backend stability and clear communication between layers.
-
----
-
 ## Project Structure
 
-```src
 src
 ├── main
 │ ├── java
@@ -93,6 +79,19 @@ src
 
 
 ---
+
+## Design & Development Approach
+
+This project was built with a strong emphasis on:
+- Separation of concerns
+- Readable backend logic
+- Predictable data flow
+- Clean template-driven UI
+
+Rather than relying on heavy frontend frameworks, the focus is on backend stability and clear communication between layers.
+
+---
+
 ## Getting Started (Local Development)
 
 ### Prerequisites
@@ -125,8 +124,6 @@ Deploying Java applications using Docker
 
 Balancing functionality with clarity in UI design
 
----
-
 Author
 Byungwook Jeon
 GitHub: https://github.com/BKjeon4
@@ -136,5 +133,4 @@ Notes
 This project was developed as part of a full-stack learning journey and continues to evolve as I refine both backend architecture and user experience.
 
 
-
-
+---
