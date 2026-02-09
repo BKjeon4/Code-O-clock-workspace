@@ -64,6 +64,7 @@ The project emphasizes clarity, maintainability, and realistic backend workflows
 ## Project Structure
 
 ```src
+src
 ├── main
 │ ├── java
 │ │ └── com.codeoclock
